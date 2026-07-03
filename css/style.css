@@ -294,37 +294,6 @@ img {
   }
 }
 
-.fv {
-  position: relative;
-}
-.fv h2 {
-  font-size: 40px;
-  line-height: 70px;
-  font-weight: 600;
-  letter-spacing: 12px;
-  white-space: nowrap;
-  text-align: center;
-  color: white;
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-}
-@media screen and (max-width: 768px) {
-  .fv h2 {
-    font-size: 30px;
-    line-height: 60px;
-  }
-}
-.fv .slider-item {
-  height: 100vh;
-  height: 100dvh;
-}
-.fv img {
-  object-fit: fill;
-}
-
 .p-about {
   background-image: url(../../images/About.webp);
   background-size: cover;
@@ -1189,6 +1158,9 @@ img {
   top: 8px;
   transform: scale(2);
 }
+.p-modal__close:focus:not(:focus-visible) {
+  outline: none !important;
+}
 .p-modal__text {
   display: flex;
   margin-top: 9px;
@@ -1205,6 +1177,38 @@ img {
 .p-modal__img {
   width: 100%;
   aspect-ratio: 1/1;
+}
+
+.fv {
+  position: relative;
+}
+.fv h2 {
+  font-size: 40px;
+  line-height: 70px;
+  font-weight: 600;
+  letter-spacing: 12px;
+  white-space: nowrap;
+  text-align: center;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 768px) {
+  .fv h2 {
+    left: 55%;
+    font-size: 30px;
+    line-height: 60px;
+  }
+}
+.fv .slider-item {
+  height: 100vh;
+  height: 100dvh;
+}
+.fv img {
+  object-fit: fill;
 }
 
 .u-my-30 {

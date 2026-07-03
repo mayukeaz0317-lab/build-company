@@ -1,0 +1,36 @@
+@use "../foundation/mixin" as *;
+
+.fv {
+    position: relative;
+
+
+    h2 {
+        font-size: 40px;
+        line-height: 70px;
+        font-weight: 600;
+        letter-spacing: 12px;
+        white-space: nowrap;
+        text-align: center;
+        color: white;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include mq {
+            left: 55%;
+            font-size: 30px;
+            line-height: 60px;
+        }
+    }
+
+    .slider-item {
+        height: 100vh;
+        height: 100dvh;
+    }
+
+    img {
+        object-fit: fill;
+    }
+}
