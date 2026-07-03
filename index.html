@@ -18,7 +18,8 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        defer></script>
 
     <script src="js/script.js" defer></script>
 </head>
@@ -398,7 +399,7 @@
                     <p>お問い合わせ</p>
                 </hgroup>
                 <p class="p-contact__desc">３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。</p>
-                <form action="" method="post" class="p-contact__form">
+                <form action="https://formspree.io/f/mkolpyjl" method="post" class="p-contact__form">
                     <div class="p-contact__form-list">
                         <div class="p-contact__text">
                             <label for="name" class="p-contact__required-label">お名前<span>*</span></label>
@@ -432,16 +433,16 @@
                             <textarea id="message" name="message" required></textarea>
                         </div>
                         <fieldset class="p-contact__checkbox">
-                            <legend>何を見て当社HPを知りましたか？ (複数回答可)　<span>*</span></legend>
+                            <legend>何を見て当社HPを知りましたか？ (複数回答可) <span>*</span></legend>
                             <div class="p-contact__checkbox-container">
-                                <label><input type="checkbox" name="source" value="">インターネット</label>
-                                <label><input type="checkbox" name="source" value="">チラシ</label>
-                                <label><input type="checkbox" name="source" value="">住宅展示場</label>
-                                <label><input type="checkbox" name="source" value="">看板</label>
-                                <label><input type="checkbox" name="source" value="">各種SNS</label>
-                                <label><input type="checkbox" name="source" value="">紹介</label>
-                                <label><input type="checkbox" name="source" value="">通りがかり</label>
-                                <label><input type="checkbox" name="source" value="">その他</label>
+                                <label><input type="checkbox" name="source[]" value="インターネット">インターネット</label>
+                                <label><input type="checkbox" name="source[]" value="チラシ">チラシ</label>
+                                <label><input type="checkbox" name="source[]" value="住宅展示場">住宅展示場</label>
+                                <label><input type="checkbox" name="source[]" value="看板">看板</label>
+                                <label><input type="checkbox" name="source[]" value="各種SNS">各種SNS</label>
+                                <label><input type="checkbox" name="source[]" value="紹介">紹介</label>
+                                <label><input type="checkbox" name="source[]" value="通りがかり">通りがかり</label>
+                                <label><input type="checkbox" name="source[]" value="その他">その他</label>
                             </div>
                         </fieldset>
                         <div class="p-contact__privacy">
@@ -477,7 +478,7 @@
                                     <p>保有個人データ利用目的(法24条1項2号)</p>
                                     <p>・当社が建築したお客様宅のアフターメンテナンスを行うため</p>
                                     <p>・当社がお客様に提供するサービスにおいて利用するため</p>
-                                    <p>・お客様に特別なサービスや新しい商品などの情報を的確にお知らせするため</p>
+                                    <p>・お客様に特別なサービスや新しい商品などの情報を的確お知らせするため</p>
                                     <p>・お客様に合ったサービスを提供するため</p>
                                     <p>・当社の建築した住宅の利用状況や利用環境などに関する調査を実施して客観的にお客様の満足度を把握するため</p>
                                     <p>・必要に応じてお客様に連絡を行うため</p>
@@ -516,11 +517,11 @@
                                     <p>弊社の個人情報の取扱いに関するお問合せは、下記までお問い合せください。</p>
                                 </div>
                                 <div class="u-mb-30">
-                                    <p>社名　株式会社北村建設興業</p>
-                                    <p>住所　長崎県長崎市横尾○丁目○-○</p>
-                                    <p>電話　000-000-0000</p>
-                                    <p>FAX　000-000-0000</p>
-                                    <p>メールアドレス　info@example.com</p>
+                                    <p>社名 株式会社北村建設興業</p>
+                                    <p>住所 長崎県長崎市横尾○丁目○-○</p>
+                                    <p>電話 000-000-0000</p>
+                                    <p>FAX 000-000-0000</p>
+                                    <p>メールアドレス info@example.com</p>
                                 </div>
 
                             </div>
