@@ -1,0 +1,63 @@
+@use "../foundation/mixin" as *;
+
+.p-works {
+    padding-top: 79.7px;
+    padding-bottom: 97px;
+
+    .c-heading {
+        margin-bottom: 68px;
+    }
+
+    @include mq {
+        padding-top: 50px;
+        padding-bottom: 42px;
+
+        .c-heading {
+            margin-bottom: 38px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include mq-576 {
+            flex-direction: column;
+            gap: 22px;
+        }
+    }
+
+    &__item {
+        @include mq-1024 {
+            width: calc((100% - 80px) / 2);
+        }
+
+        @include mq-576 {
+            width: 100%;
+        }
+
+    }
+    &__button{
+        display: block;
+        width: 100%;
+    }
+
+    &__img {
+        margin-bottom: 19px;
+        aspect-ratio: 1 / 1;
+
+        @include mq-576 {
+            aspect-ratio: 315 / 250;
+            margin-bottom: 9px;
+        }
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+

@@ -1,0 +1,23 @@
+@mixin mq($breakpoint: 768px) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin mq-1024 {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin mq-930 {
+  @media screen and (max-width: 930px) {
+    @content;
+  }
+}
+
+@mixin mq-576 {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}

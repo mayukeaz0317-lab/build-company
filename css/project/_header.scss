@@ -1,0 +1,215 @@
+@use "../foundation/mixin" as *;
+
+.top-wrapper {
+    position: relative;
+}
+
+.p-header {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    right: 80px;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-weight: 500;
+
+    @include mq-1024 {
+        padding-top: 12px;
+        top: 0;
+        left: 20px;
+        right: 0;
+        height: auto;
+    }
+
+    &__logo {
+        font-size: 20px;
+        line-height: 20px;
+
+        @include mq-1024 {
+            font-size: 25px;
+        }
+
+        @include mq {
+            line-height: 33px;
+            font-size: 20px;
+        }
+    }
+
+    &__hamburger {
+        display: none;
+        position: relative;
+
+        @include mq-1024 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 72px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 100;
+            background-color: white;
+
+            span {
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background-color: #4D9600;
+                /* Figmaに合わせて変更 */
+                transition: all 0.3s;
+                border-radius: 4px;
+
+                &:nth-child(1) {
+                    top: 0;
+                }
+
+                &:nth-child(2) {
+                    top: 10px;
+                }
+
+                &:nth-child(3) {
+                    bottom: 0;
+                }
+            }
+
+        }
+
+    }
+
+    .js-hamburger {
+        &.is-open {
+
+            span {
+
+                &:nth-child(1) {
+                    transform: translateY(10px) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-10px) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &__hamburger-inner {
+        display: block;
+        position: relative;
+        width: 32px;
+        height: 24px;
+    }
+
+
+
+    &__menu-list {
+        display: flex;
+        align-items: center;
+        gap: 31px;
+        font-size: 18px;
+        line-height: 18px;
+        height: 33px;
+
+        li {
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+
+        }
+
+        li:hover {
+
+            border-bottom: 1px solid white;
+        }
+
+        @include mq-1024 {
+            position: absolute;
+            display: flex;
+            width: 300px;
+            height: 348px;
+            background: rgba(77, 150, 0, 1);
+            transition: all 0.3s;
+            z-index: 9999;
+            flex-direction: column;
+            align-items: start;
+            gap: 25px;
+            padding-top: 12px;
+            padding-bottom: 13px;
+            padding-left: 20px;
+            line-height: 33px;
+            top: 50px;
+            right: -100%;
+            pointer-events: none;
+            visibility: hidden;
+            /* これで右に隠れる */
+
+            &.active {
+                right: 0;
+                visibility: visible;
+                pointer-events: auto;
+
+
+            }
+
+            li {
+                padding: 0;
+                border-bottom: none;
+            }
+
+            li:hover {
+                border-bottom: none;
+            }
+
+        }
+    }
+
+}
+
+
+
+
+.fv {
+    position: relative;
+
+
+    h2 {
+        font-size: 40px;
+        line-height: 70px;
+        font-weight: 600;
+        letter-spacing: 12px;
+        white-space: nowrap;
+        text-align: center;
+        color: white;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+    }
+
+    @include mq {
+
+        h2 {
+            font-size: 30px;
+            line-height: 60px;
+        }
+
+    }
+
+    .slider-item {
+        height: 100vh;
+        height: 100dvh;
+    }
+
+    img {
+        object-fit: fill;
+    }
+}

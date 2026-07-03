@@ -1,0 +1,70 @@
+@use "../foundation/mixin" as *;
+
+.p-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+
+    &__overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+    }
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        width: 450px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        padding-inline: 40px;
+        position: relative;
+
+        @include mq-576 {
+            width: 315px;
+        }
+    }
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        transform: scale(2);
+
+        &:focus:not(:focus-visible) {
+            outline: none !important;
+        }
+    }
+
+    &__text {
+        display: flex;
+        margin-top: 9px;
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 500;
+
+        @include mq-576 {
+            margin-top: 7px;
+            display: block;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+
+}

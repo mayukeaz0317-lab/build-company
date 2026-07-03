@@ -1,0 +1,101 @@
+@use "../foundation/mixin" as *;
+
+.p-footer {
+    &__name {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 33px;
+        padding-bottom: 28px;
+        position: relative;
+
+        @include mq {
+            padding-bottom: 20px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 722px;
+            background-color: black;
+            height: 1px;
+
+            @include mq {
+                width: 315px;
+            }
+        }
+
+    }
+
+    &__content {
+        padding-top: 80px;
+        text-align: center;
+
+        @include mq {
+            padding-top: 50px;
+        }
+
+    }
+
+    &__menu {
+        margin-top: 28px;
+        margin-bottom: 28px;
+
+        @include mq {
+            margin-top: 20px;
+            padding: 0 35px;
+        }
+    }
+
+    &__menu-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 33px;
+        letter-spacing: 0.2px;
+
+        @include mq {
+            flex-wrap: wrap;
+            row-gap: 5px;
+            column-gap: 30px;
+        }
+    }
+
+    &__sns {
+
+        margin-bottom: 80px;
+
+        @include mq {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__sns-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__copyright {
+        background-color: rgba(77, 150, 0, 1);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 33px;
+        height: 92px;
+
+        @include mq {
+            line-height: 25px;
+            text-align: center;
+        }
+    }
+}

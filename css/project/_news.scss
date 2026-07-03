@@ -1,0 +1,110 @@
+@use "../foundation/mixin" as *;
+
+.p-news {
+    background-color: rgba(77, 150, 0, 0.1);
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .c-heading {
+        margin-bottom: 68px;
+
+        @include mq {
+            margin-bottom: 38px;
+        }
+    }
+
+    @include mq {
+        padding: 50px 0;
+    }
+
+    &__contents {
+        display: flex;
+        gap: 60px;
+
+        @include mq {
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+
+    &__column {
+        flex: 1;
+    }
+
+    &__title {
+        padding: 9px 0 8px 20px;
+        background-color: rgba(77, 150, 0, 1);
+        color: #fff;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 33px;
+    }
+
+    &__body {
+        padding: 0 20px 28px;
+        background-color: #fff;
+    }
+
+    &__item {
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 13px;
+        font-weight: 500;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            padding-top: 20px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: rgba(77, 150, 0, 1);
+        }
+    }
+
+    &__link {
+        display: flex;
+        gap: clamp(19px, 2vw, 69px);
+    }
+
+    &__time {
+        font-size: 16px;
+        line-height: 33px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 25px;
+
+        @include mq {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+    }
+
+    &__more {
+        position: relative;
+        padding-top: 23px;
+        padding-right: 33px;
+        text-align: right;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__more-text {
+        color: rgba(85, 165, 0, 1);
+    }
+
+    &__more-icon {
+        position: absolute;
+        right: 0;
+        bottom: -9px;
+    }
+}
